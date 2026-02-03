@@ -4,11 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Energy</title>
-  <!-- ИЗМЕНИ ./css/main.scss на css/styles.css -->
-  <link rel="stylesheet" href="css/styles.css">
+  <!-- УБЕРИ ОДИН ИЗ ЭТИХ ДВУХ! -->
+  <link rel="stylesheet" href="/VanillaAppProject0/css/styles.css">
 </head>
 <body>
-  <!-- ЗАМЕНИ load теги на JavaScript загрузку -->
   <div id="header"></div>
   <main>
     <div id="home"></div>
@@ -20,24 +19,21 @@
   <div id="notification" style="display: none;"></div>
 
   <script>
-    // Функция загрузки partials
+    // Используй АБСОЛЮТНЫЕ пути для partials
     async function loadPartials() {
+      const base = '/VanillaAppProject0/';
       const parts = [
-        { id: 'header', file: 'partials/header.html' },
-        { id: 'home', file: 'partials/home.html' },
-        { id: 'exercises', file: 'partials/exercises.html' },
-        { id: 'footer', file: 'partials/footer.html' },
-        { id: 'exercise-modal', file: 'partials/exercise-modal.html' },
-        { id: 'rating-modal', file: 'partials/rating-modal.html' },
-        { id: 'notification', file: 'partials/global-notification.html' }
+        { id: 'header', file: base + 'partials/header.html' },
+        { id: 'home', file: base + 'partials/home.html' },
+        { id: 'exercises', file: base + 'partials/exercises.html' },
+        { id: 'footer', file: base + 'partials/footer.html' }
       ];
       
       for (const part of parts) {
         try {
           const response = await fetch(part.file);
           if (response.ok) {
-            const html = await response.text();
-            document.getElementById(part.id).innerHTML = html;
+            document.getElementById(part.id).innerHTML = await response.text();
           }
         } catch (error) {
           console.log('Error loading:', part.file);
@@ -48,9 +44,8 @@
     document.addEventListener('DOMContentLoaded', loadPartials);
   </script>
   
-  <!-- ИЗМЕНИ ./main.js на js/main.js -->
+  <!-- АБСОЛЮТНЫЕ пути для JS -->
   <script type="module" src="/VanillaAppProject0/js/main.js"></script>
-  <link rel="stylesheet" href="/VanillaAppProject0/css/styles.css">
   <script type="module" src="/VanillaAppProject0/js/exercises.js"></script>
   <script type="module" src="/VanillaAppProject0/js/quote.js"></script>
 </body>
