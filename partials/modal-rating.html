@@ -1,0 +1,47 @@
+<div class="backdrop isHidden" data-rating-backdrop>
+  <div class="modal">
+    <button class="modalCloseBtn" data-rating-close>✕</button>
+
+    <h2 class="modalTitle">Rate exercise</h2>
+
+    <form class="ratingForm">
+      <fieldset class="ratingStars">
+        <legend>Your rating</legend>
+
+        <label>
+          <input type="radio" name="rating" value="1" required />
+          1
+        </label>
+        <label>
+          <input type="radio" name="rating" value="2" />
+          2
+        </label>
+        <label>
+          <input type="radio" name="rating" value="3" />
+          3
+        </label>
+        <label>
+          <input type="radio" name="rating" value="4" />
+          4
+        </label>
+        <label>
+          <input type="radio" name="rating" value="5" />
+          5
+        </label>
+      </fieldset>
+
+      <label class="emailLabel">
+        Email
+        <input
+          type="email"
+          name="email"
+          required
+          pattern="^\\w+(\\.\\w+)?@[a-zA-Z_]+?\\.[a-zA-Z]{2,3}$"
+          placeholder="example@email.com"
+        />
+      </label>
+
+      <button type="submit" class="submitBtn">Send</button>
+    </form>
+  </div>
+</div>
