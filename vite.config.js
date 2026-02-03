@@ -7,5 +7,9 @@ export default defineConfig({
   plugins: [
     injectHTML(),
     fullReload(['**/*.html'])
-  ]
+  ],
+    build: {
+    outDir: '../docs',
+    base: './',
+  }
 })
