@@ -1,0 +1,52 @@
+/* Скомпилированные стили из SCSS */
+body {
+  font-family: 'DM Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  color: #1b1b1b;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  background: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.exercises {
+  padding: 60px 0;
+  background: white;
+  border-radius: 20px;
+  margin: 40px 20px;
+}
+
+.exercises__content__main__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.exercise-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  aspect-ratio: 1;
+  position: relative;
+}
+
+.quote-card {
+  background: #1b1b1b;
+  color: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 40px 20px;
+}
+
+/* Добавь больше стилей из твоих SCSS файлов */
